@@ -7,11 +7,11 @@ function NewQuestion(props){
         console.log(response)
         // // convert response into javascript object
         const data = await response.json()
-        console.log(data)
+        console.log(data[0].question)
         // // update the state
         props.setQuestion(data)
     }
     return <button onClick={fetchQuestion}>Click Me</button>
 }
 
-export default NewQuestion;
+export default NewQuestion
